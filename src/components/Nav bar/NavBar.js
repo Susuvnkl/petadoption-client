@@ -47,7 +47,6 @@ export default function NavBar() {
         setIsNavbarVisible(false);
       }
       setPrevScrollpos(currentScrollPos);
-      console.log(1, currentScrollPos, 2, prevScrollpos, 3, visible);
     };
 
     window.addEventListener("scroll", handleScroll);
