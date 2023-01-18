@@ -67,7 +67,7 @@ export default function ProfilePage() {
 
   return (
     <>
-      <Card className="mx-auto p-3" style={{ width: "70vw" }}>
+      <Card className="mx-auto p-3 m-5" style={{ width: "70vw" }}>
         <h1>Profile Details</h1>
         <Form id="singupForm">
           <FloatingLabel controlId="floatingFirstName" label="First Name" className="mb-3">
