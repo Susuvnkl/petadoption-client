@@ -1,0 +1,16 @@
+#editPetPhoto{
+    padding: 0 10px 10px 10px;
+    /* height: 22vh;
+    width: auto; */
+    border-radius: 22px;
+}
+
+#headerName{
+    position: absolute;
+    left: 10px;
+    top:  25px;
+    color: white;
+    font-weight: 700;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}

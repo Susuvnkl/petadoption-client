@@ -1,0 +1,130 @@
+#petPage {
+    display: flex;
+    margin: 5vh auto;
+    flex-direction: column;
+    align-items: center;
+    border: 2px black;
+    width: 65vw;
+    height: 100vh;
+}
+
+#photosCard{
+    border: solid 2px black;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+#petInfoList{
+  list-style: none;
+  padding: 5px !important;
+margin: 5px;
+justify-items: start;
+display: flex !important;
+flex-wrap: wrap !important;
+}
+#imYoursMobile{
+  display: none;
+}
+
+#nameAge{
+  position: absolute;
+  color: white;
+  left: 17px;
+  top: 10px;
+  font-weight: 700;
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.736));
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: black;
+}
+
+#adoptionStatusPetPage, #imYours{
+scale: 1;
+position: absolute;
+color: white;
+right: 17px;
+top: 10px;
+font-weight: 700;
+filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.736));
+-webkit-text-stroke-width: 0.2px;
+-webkit-text-stroke-color: black;
+}
+
+#statusButtons{
+  display: flex;
+  flex-direction: column;
+}
+
+
+#petInfoItem{
+  font-size: small;
+  /* border: 2px solid #7A98FF; */
+  background-color: #7A98FF;
+  color: white;
+  border-radius: 5px;
+  font-weight: 700;
+  padding:  2px 7px;
+  display: inline;
+  width: fit-content;
+  margin: 4px;
+
+}
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 5vw;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .card {
+    position: relative;
+    display: block;
+    height: 100%;  
+    border-radius: 20px;
+    overflow: hidden;
+    text-decoration: none;
+  }
+  
+  .card__image {      
+    width: 100%;
+    height: auto;
+    border-radius: calc(var(--curve) * 1px), 0, 0;
+
+  }
+  
+  .card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;    
+    background-color: var(--surface-color);
+    justify-content: space-between;
+  }
+  
+ 
+
+  @media only screen and (max-width: 1000px) {
+    #imYours{
+      scale: 0.8;
+      right: 5px;
+      top: 5px;
+    }
+    #nameAge{
+      scale: 0.8;
+      left: 5px;
+      top: 5px;
+    }
+    #petPage {
+      display: flex;
+      margin: 3vh auto;
+      flex-direction: column;
+      align-items: center;
+      border: 2px black;
+      width: 88vw;
+      height: 100vh;
+  }
+  }

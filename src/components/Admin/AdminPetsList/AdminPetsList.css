@@ -1,0 +1,12 @@
+#mainContainer{
+    display: flex;
+}
+
+#petsTable{
+    width: 35vw;
+    padding: 7px;
+}
+
+#petDetails{
+    width: 45vw;
+}

@@ -1,0 +1,152 @@
+:root {
+    --surface-color: #fff;
+    --curve: 40;
+  }
+  
+#adoptionStatus {
+  margin: 8px;
+  color: white;
+  position: absolute;
+  font-weight: 700;
+  filter: drop-shadow(0 0 0.17rem rgba(0, 0, 0, 0.8));
+  -webkit-text-stroke: 0.5px black;
+}
+
+#heartSvg {
+  position: absolute;
+  width: 9%;
+  right: 8px;
+  bottom: 93px;
+  filter: drop-shadow(0 0 0.17rem rgba(0, 0, 0, 0.8));
+  transition: transform .2s;
+  z-index: 7;
+}
+#heartSvg:hover {
+  transform: scale(1.15);
+  cursor: pointer;
+}
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    /* font-family: 'Noto Sans JP', sans-serif; */
+    font-family: 'Calibri', Times, serif;
+    background-color: #fef8f8;
+  }
+  
+  #cardButton{
+    position: absolute;
+    right: 7px;
+    bottom: 8px;
+  }
+
+  #petCardContainer {
+    filter: drop-shadow(0 0 0.8rem rgb(255, 255, 255));
+    max-width: 350px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 5vw;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  #petsInfo{
+    filter: drop-shadow(0 0 0.75rem rgba(255, 255, 255, 0.736));
+    padding: 20px 0;
+  }
+  
+  .card {
+    position: relative;
+    display: block;
+    height: 100%;  
+    border-radius: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    border: 0;
+  }
+  
+  .card__image {      
+    width: 100%;
+    height: auto;
+  }
+  
+  .card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;      
+    border-radius: calc(var(--curve) * 1px);    
+    background-color: var(--surface-color);      
+  }
+  
+  .card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 1em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;    
+    background-color: var(--surface-color);
+  }
+  
+  .card__arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;      
+    z-index: 1;
+  }
+  
+  .card__arc path {
+    fill: var(--surface-color);
+    d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+  }       
+  
+  
+  .card__thumb {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;      
+    border-radius: 50%;      
+  }
+  
+  .card__title {
+    font-size: 1em;
+    margin: 0 0 .3em;
+    color: #6A515E;
+  }
+  
+  .card__tagline {
+    display: block;
+    margin: 1em 0;
+    font-family: "MockFlowFont";  
+    font-size: .8em; 
+    color: #D7BDCA;  
+  }
+  
+  .card__status {
+    font-size: .8em;
+    color: #D7BDCA;
+  }
+
+
+  @media only screen and (min-width: 1000px) {
+    #petsInfo{
+      max-width: 40vw;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+
+.card__header{
+  flex-direction: column;
+}
+}
