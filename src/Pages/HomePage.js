@@ -27,14 +27,10 @@ export default function HomePage() {
     }
   };
 
-  // useEffect(() => {
-  //   console.log(event.data.state);
-  // }, [navigat]);
   return (
     <>
       <div id="">
         <div id="homePageMainContainer">
-          {/* <div id="pagePhoto"></div> */}
           <div id="greatingHeader">
             {loggedUser ? (
               <h1>Hi {loggedUser}, Welcome Back!</h1>
@@ -48,11 +44,11 @@ export default function HomePage() {
           <div id="homePageCardContainer">
             <div id="homePageCard">
               <p id="svgHeader">Looking For A Dog?</p>
-              <img id="homePageSearchSvg" src={DogSearchHome} alt="dog search"></img>
+              <img id="homePageSearchSvg" onClick={() => navigate("/search")} src={DogSearchHome} alt="dog search"></img>
             </div>
             <div id="homePageCard">
               <p id="svgHeader">Looking For A Cat?</p>
-              <img id="homePageSearchSvg" src={CatSearchHome} alt="cat search"></img>
+              <img id="homePageSearchSvg" onClick={() => navigate("/search")} src={CatSearchHome} alt="cat search"></img>
             </div>
             <div id="homePageCard">
               <p id="svgHeader">Take A Look At Our Pets</p>
